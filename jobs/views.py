@@ -47,7 +47,7 @@ def encontrar_jobs(request):
 
         else:
             jobs = Jobs.objects.filter(reservado=False)
-            return render(request, 'encontar_jobs.html', {'jobs': jobs})
+        return render(request, 'encontar_jobs.html', {'jobs': jobs})
 
 @login_required(login_url='/auth/logar')
 def aceitar_job(request, id):
